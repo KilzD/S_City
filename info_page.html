@@ -25,7 +25,7 @@
         <a onclick="clicked(this)">Месяц</a>
         <a onclick="clicked(this)" style="border-right: 0px">Год</a>
     </div>
-    <div class="chart" id="chart_div" style="height: 20%"></div>
+    <div class="chart" id="ch" style="height: 20%"></div>
 
     <script src="https://cdn.anychart.com/js/latest/anychart-bundle.min.js"></script>
     <script>
@@ -38,7 +38,6 @@
                 type: "get",
                 dataType: 'json',
                 success(data) {
-
                         let obj = {
                             time: data.time,
                             t: data.t,
@@ -49,7 +48,7 @@
                     anychart.onDocumentLoad(function () {
                         // create chart and set data
                         // as Array of Objects
-                        var chart = anychart.column();
+                        var chart = anychart.line();
                         chart.data({
                             header: ["#", "Time", "Текущая температура", "Температура снаружи"],
                             rows: [arr]
@@ -57,7 +56,7 @@
                         chart.title("Array of Objects");
                         chart.legend(true);
                         console.log("Ну, мы здесь!");
-                        chart.container("chart_div").draw();
+                        chart.container("ch").draw();
                     });
                 },
                 error(msg) {
