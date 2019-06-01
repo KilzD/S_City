@@ -1,0 +1,79 @@
+html,body, .app{
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+}
+
+.app{
+    display: flex;
+    flex-direction: row;
+}
+
+.map_place{
+    margin-top: 3%;
+    margin-left: 5%;
+    width: 70%;
+    height: 90%;
+    flex-direction: column;
+}
+
+.search_img{
+    width: 2%;
+    height: 16px;
+}
+
+.search_text_place{
+    width: 86%;
+    height: 16px;
+    margin-top: 0px;
+}
+
+.search_placeholder{
+    border-radius: 10px;
+    padding: 10px 0px 10px 10px;
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.1);
+    flex-direction: row;
+    width: 99%;
+}
+
+.search_placeholder button{
+    width: 10%;
+    height: 22px;
+}
+
+.map_placeholder{
+    border-radius: 10px;
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.1);
+    margin-top: 2%;
+    height: calc(98% - 36px);
+}
+
+.right_side{
+    margin-left: 5%;
+    width: 25%;
+    height: 100%;
+}
+
+.card{
+    flex-direction: column;
+    margin-top: 36px;
+    height: 20%;
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.1);
+    padding-top: 3px;
+}
+
+.card h3{
+    color: #0098EE;
+    width: 75%;
+    border-bottom: 1px solid #0098EE;
+    margin-top: 4%;
+    margin-left: 10%;
+    font-family: Roboto;
+}
+
+.card p{
+    margin-left: 10%;
+    font-family: Roboto;
+}

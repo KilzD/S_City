@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Карта</title>
+    <link rel="stylesheet"type="text/css" href="map_style.css">
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet'/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="app">
+    <div class="map_place">
+        <div class="search_placeholder">
+            <img class="search_img" src="images/search_img.svg">
+            <input type="text" class="search_text_place">
+            <button id="find" onclick="">Найти</button>
+        </div>
+        <div id="map" class="map_placeholder"></div>
+    </div>
+    <div class="right_side">
+        <img src="images/factory.svg" style="display: block; position: relative; top:14%; left: -4%; height: 10%; width: 10%;">
+        <div class="card">
+            <h3>Адрес котельной</h3>
+            <p>Температура по ГОСТ: 70 °C</p>
+            <p id="hot_bowl_temp">Текущая температура: </p>
+            <p id="info_hot_bowl" style="color:#0098EE; cursor: pointer;">Подробнее-></p>
+        </div>
+
+        <img src="images/home.svg" style="display: block; position: relative; top:14%; left: -4%; height: 10%; width: 10%;">
+        <div class="card">
+            <h3>Адрес дома</h3>
+            <p>Температура по ГОСТ: 70 °C</p>
+            <p id="house_temp">Текущая температура: </p>
+            <p id="info_house" style="color:#0098EE; cursor: pointer;">Подробнее-></p>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<script src="map_script.js"></script>
+
+</html>

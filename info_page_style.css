@@ -1,0 +1,92 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+}
+
+.exit_btn_place{
+    margin-top: 3%;
+    margin-left: 3%;
+    width: 20%;
+    height: 6%;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+.exit_btn_place p{
+    font-family: Roboto;
+}
+
+.app{
+    height: 91%;
+    display: flex;
+    flex-direction: column;
+}
+
+.app h3{
+    margin-left: 6%;
+    font-family: Roboto;
+    color: #0098EE;
+}
+
+.time_of_graph{
+    display: flex;
+    width: 100%;
+    margin-left: 6%;
+    flex-direction: row;
+}
+
+.time_of_graph a{
+    padding-right: 6px;
+    padding-left: 6px;
+    border-right: 2px solid #888888;
+    cursor: pointer;
+}
+
+.time_of_graph .active{
+    color: #0098EE;
+}
+
+.chart{
+    margin-left: 6%;
+    width: 88%;
+}
+
+.legend{
+    margin-left: 6%;
+    width: 88%;
+    display: flex;
+    flex-direction: row;
+}
+
+.red_info_legend{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 6px;
+    margin-right: 2%;
+}
+
+.blue_info_legend{
+    margin-right: 2%;
+    width: 20px;
+    height: 20px;
+    background-color: cyan;
+    border-radius: 6px;
+}
+
+.yellow_info_legend{
+    margin-right: 1%;
+    width: 20px;
+    height: 20px;
+    background-color: yellowgreen;
+    border-radius: 6px;
+}
+
+.legend p{
+    margin-top: 0px;
+    font-family: Roboto;
+    font-size: 19px;
+    margin-right: 10%;
+}

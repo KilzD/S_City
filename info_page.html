@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Информация</title>
+    <link rel="stylesheet"type="text/css" href="info_page_style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <script src="info_page_script.js"></script>
+    <script src="http://benpickles.github.io/peity/jquery.peity.js"></script>
+</head>
+
+<body>
+
+<div class="exit_btn_place" onclick="document.location.replace('map.html')">
+    <img class="back">
+    <p>Назад</p>
+</div>
+
+<div class="app">
+    <h3>Адрес котельной</h3>
+    <div class="time_of_graph">
+        <a onclick="clicked(this)">День</a>
+        <a onclick="clicked(this)">Неделя</a>
+        <a onclick="clicked(this)">Месяц</a>
+        <a onclick="clicked(this)" style="border-right: 0px">Год</a>
+    </div>
+    <div class="chart" id="chart_div" style="height: 20%"></div>
+
+    <script src="https://cdn.anychart.com/js/latest/anychart-bundle.min.js"></script>
+    <script>
+
+        var arr=[];
+
+        function drawGraph() {
+            $.ajax({
+                url: "http://10.20.3.26:8000/vlad",
+                type: "get",
+                dataType: 'json',
+                success(data) {
+
+                        let obj = {
+                            time: data.time,
+                            t: data.t,
+                            t_outside: data.t_outside
+                        };
+                        arr.push(obj);
+
+                    anychart.onDocumentLoad(function () {
+                        // create chart and set data
+                        // as Array of Objects
+                        var chart = anychart.column();
+                        chart.data({
+                            header: ["#", "Time", "Текущая температура", "Температура снаружи"],
+                            rows: [arr]
+                        });
+                        chart.title("Array of Objects");
+                        chart.legend(true);
+                        console.log("Ну, мы здесь!");
+                        chart.container("chart_div").draw();
+                    });
+                },
+                error(msg) {
+                    console.log(msg);
+                    console.log(this.url);
+                }
+            })
+        };
+
+        setInterval(drawGraph, 5000);
+
+    </script>
+
+    <div class="legend">
+        <div class="red_info_legend"></div>
+        <p>Температура по ГОСТ</p>
+        <div class="blue_info_legend"></div>
+        <p>Температура текущая</p>
+        <div class="yellow_info_legend"></div>
+        <p>Температура на улице</p>
+    </div>
+
+    <h3>В чем может быть проблема</h3>
+
+</div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+</body>
+</html>
