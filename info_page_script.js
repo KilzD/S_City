@@ -94,27 +94,14 @@ function updateChart(count) {
     count = count || 1;
     for (var i = 0; i < count; i++) {
         time.setTime(time.getTime() + updateInterval);
-        $.ajax({
-                url: "http://10.20.3.26:8000/vlad",
-                type: "get",
-                async: false,
-                dataType: 'json',
-                success(data) {
-                    dataPoints1.push({
-                        x: time.getTime(),
-                        y: data.t_outside
-                    });
-                    dataPoints2.push({
-                        x: time.getTime(),
-                        y: data.t
-                    });
-                },
-                error(msg) {
-                    console.log(msg);
-                    console.log(this.url);
-                }
-            }
-        )
+        dataPoints1.push({
+            x: time.getTime(),
+            y: Math.random() * (70-60) + 60
+        });
+        dataPoints2.push({
+            x: time.getTime(),
+            y: Math.random() * (18-8) + 8
+        });
     }
     chart.render();
 }

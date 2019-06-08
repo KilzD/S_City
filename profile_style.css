@@ -1,0 +1,133 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.exit_btn_place{
+    margin-top: 3%;
+    margin-left: 3%;
+    width: 30%;
+    height: 6%;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+.exit_btn_place p{
+    margin-left: 1%;
+    font-family: Roboto;
+}
+
+.app{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: Roboto;
+}
+
+.top{
+    width: 50%;
+}
+
+.top_p{
+    margin-left: 12%;
+    font-size: 15px;
+    line-height: 35px;
+    color: #A4A4A4;
+}
+
+.results{
+    width: 38%;
+    margin-left: 10%;
+}
+
+.results_p{
+    text-align: center;
+    margin-right: 10%;
+    color:#0098EE;
+    font-size: 20px;
+    line-height: 47px;
+}
+
+.app h2{
+    margin-left: 12%;
+    font-size:24px;
+    line-height:56px;
+    color:#0098EE;
+}
+
+.left_side{
+    margin-left: calc(3% + 5px);
+    width: 38%;
+    height: 60%;
+}
+
+.left_p{
+    text-align: center;
+    margin-right: 10%;
+    color:#0098EE;
+    font-size: 20px;
+    line-height: 47px;
+}
+
+.cube_meters{
+    margin-left: 4%;
+    width: 80%;
+    height: 33%;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    display: flex;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.cube_meters p{
+    align-items: center;
+    text-align: center;
+    font-weight:500;
+    font-size: 40px;
+    color: #888888;
+    margin-top: 8%;
+}
+
+.right_side{
+    margin-left: calc(18% + 5px);
+    width: 38%;
+    height: 60%;
+}
+
+.right_p{
+    text-align: center;
+    margin-right: 10%;
+    color:#0098EE;
+    font-size: 20px;
+    line-height: 47px;
+}
+
+.separator{
+    display: flex;
+    flex-direction: row;
+}
+
+.temp_holder{
+    margin-right: 4%;
+    width: 18%;
+    height: 33%;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    display: flex;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.temp_holder p{
+    align-items: center;
+    text-align: center;
+    font-weight:500;
+    font-size: 24px;
+    color: #888888;
+    margin-top: 18%;
+}
